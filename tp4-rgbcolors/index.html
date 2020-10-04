@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	
+	<div id="app">
+		<encabezado :color-princial="colorPrincial" :is-principal-background="isPrincipalBackground"></encabezado>
+		<nav-botonera :color-princial="colorPrincial" :colors="colors" :mensaje='mensaje' :is-principal-background="isPrincipalBackground"></nav-botonera>
+		<div id="container">
+			<square-box v-for="(color, index) in colors"
+            :color="color"
+            :index="index"
+			:colors='colors'
+			:es-color-encabezado="esColorEncabezado">
+			</square-box>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	<script type="text/javascript" src="rgbgame_cdn.js"></script>
+</body>
+
+</html>
